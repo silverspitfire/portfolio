@@ -1,0 +1,338 @@
+/* HTML, CSS & JS written by John Lungu (pictures provided by Head First) */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* equals 10px (1rem), which is 62.5% of the original browser font size of 16px. (calculation formula: 10/16*100=62.5). The reason for setting this size property in percentage is so that we can use rem units throughout the CSS styling. 1 rem = 10px */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: aliceblue;
+  font-weight: 400;
+  background-color: black;
+}
+
+/* LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: 7.5rem repeat(10, 9.6rem) 1fr;
+  grid-template-rows: 9.8rem repeat(9, 9.6rem);
+  grid-template-areas:
+    ". btn-newgame btn-newgame . . . . . . . . ."
+    ". . A0 A1 A2 A3 A4 A5 A6 . . ."
+    ". . B0 B1 B2 B3 B4 B5 B6 . . ."
+    ". . C0 C1 C2 C3 C4 C5 C6 . . ."
+    ". . D0 D1 D2 D3 D4 D5 D6 . . ."
+    ". . E0 E1 E2 E3 E4 E5 E6 . . ."
+    ". . F0 F1 F2 F3 F4 F5 F6 . . ."
+    ". . G0 G1 G2 G3 G4 G5 G6 . . ."
+    ". . . . . . . . . cannon cannon cannon"
+    ". . . . . . . . . cannon cannon cannon";
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+/* ELEMENTS */
+#A0 {
+  grid-area: A0;
+}
+
+#A1 {
+  grid-area: A1;
+}
+
+#A2 {
+  grid-area: A2;
+}
+
+#A3 {
+  grid-area: A3;
+}
+
+#A4 {
+  grid-area: A4;
+}
+
+#A5 {
+  grid-area: A5;
+}
+
+#A6 {
+  grid-area: A6;
+}
+
+#B0 {
+  grid-area: B0;
+}
+
+#B1 {
+  grid-area: B1;
+}
+
+#B2 {
+  grid-area: B2;
+}
+
+#B3 {
+  grid-area: B3;
+}
+
+#B4 {
+  grid-area: B4;
+}
+
+#B5 {
+  grid-area: B5;
+}
+
+#B6 {
+  grid-area: B6;
+}
+
+#C0 {
+  grid-area: C0;
+}
+
+#C1 {
+  grid-area: C1;
+}
+
+#C2 {
+  grid-area: C2;
+}
+
+#C3 {
+  grid-area: C3;
+}
+
+#C4 {
+  grid-area: C4;
+}
+
+#C5 {
+  grid-area: C5;
+}
+
+#C6 {
+  grid-area: C6;
+}
+
+#D0 {
+  grid-area: D0;
+}
+
+#D1 {
+  grid-area: D1;
+}
+
+#D2 {
+  grid-area: D2;
+}
+
+#D3 {
+  grid-area: D3;
+}
+
+#D4 {
+  grid-area: D4;
+}
+
+#D5 {
+  grid-area: D5;
+}
+
+#D6 {
+  grid-area: D6;
+}
+
+#E0 {
+  grid-area: E0;
+}
+
+#E1 {
+  grid-area: E1;
+}
+
+#E2 {
+  grid-area: E2;
+}
+
+#E3 {
+  grid-area: E3;
+}
+
+#E4 {
+  grid-area: E4;
+}
+
+#E5 {
+  grid-area: E5;
+}
+
+#E6 {
+  grid-area: E6;
+}
+
+#F0 {
+  grid-area: F0;
+}
+
+#F1 {
+  grid-area: F1;
+}
+
+#F2 {
+  grid-area: F2;
+}
+
+#F3 {
+  grid-area: F3;
+}
+
+#F4 {
+  grid-area: F4;
+}
+
+#F5 {
+  grid-area: F5;
+}
+
+#F6 {
+  grid-area: F6;
+}
+
+#G0 {
+  grid-area: G0;
+}
+
+#G1 {
+  grid-area: G1;
+}
+
+#G2 {
+  grid-area: G2;
+}
+
+#G3 {
+  grid-area: G3;
+}
+
+#G4 {
+  grid-area: G4;
+}
+
+#G5 {
+  grid-area: G5;
+}
+
+#G6 {
+  grid-area: G6;
+}
+
+.board-game-image {
+  align-self: start;
+  justify-self: start;
+}
+
+#btn-new-game {
+  grid-area: btn-newgame;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: gold;
+  background-color: #6b8d20;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#btn-new-game:hover {
+  transform: translateY(-3%);
+  box-shadow: 0 1rem 2rem rgba(142, 141, 141, 0.4);
+}
+
+#btn-new-game:active {
+  transform: translateY(3%);
+  box-shadow: 0 1.75rem 3.5rem rgba(142, 141, 141, 0.1);
+}
+
+.player {
+  grid-area: cannon;
+  justify-self: start;
+  align-self: start;
+  width: 22rem;
+  height: 19rem;
+  padding: 1.6rem 1.6rem 2rem 1rem;
+  border-radius: 5rem 5rem 1rem 1rem;
+  background-color: #6b8d20;
+}
+
+.player__label {
+  font-size: 1.6rem;
+  color: gold;
+  font-weight: 600;
+}
+
+.player__input {
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 7rem;
+  height: 5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 800;
+  background-color: #b6d279;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.player__btn-fire {
+  margin: 0 0 1.2rem 1.4rem;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 5rem;
+  border: orangered 1.3rem dashed;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: brown;
+  cursor: pointer;
+  background-color: #7eb30a;
+  transition: all 0.2s;
+}
+
+.player__btn-fire:hover {
+  transform: translateY(-3%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.player__btn-fire:active {
+  transform: translateY(3%);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+#player__message {
+  font-size: 1.6rem;
+  color: rgb(187, 6, 6);
+  font-weight: 600;
+}
+
+#game-over-message {
+  position: absolute;
+  top: 60%;
+  left: 32%;
+  color: gold;
+  transform: scale(800%) rotateZ(-30deg);
+}
+
+.hidden {
+  display: none;
+}

@@ -24,7 +24,14 @@
 //   calculate_AGE
 // delayed_departure
 
-// Should produce this output (each output on a separate line):
+// Should produce this output (5 separate console.log outputs):
+// underscoreCase      ✅
+// firstName           ✅✅
+// someVariable        ✅✅✅
+// calculateAge        ✅✅✅✅
+// delayedDeparture    ✅✅✅✅✅
+
+// My test data:
 // underscoreCase;
 // firstName;
 // firstMiddleLast;
@@ -86,17 +93,21 @@ const convertToCamelCase = function (string) {
 
       output.push(k);
 
-      //   console.log(k); // this was part of the original challenge - to print to console.
-
       textArea.value += k + "\n";
     }
+
+    let emoji = "✅";
+    for (const i of output) {
+      console.log(i.padEnd(30, " ") + emoji);
+      emoji += "✅";
+    } // this was part of the original challenge - to print to console.
   }
 };
 
 const copyConvertedData = function () {
   navigator.clipboard.writeText(textArea.value);
   textArea.value = "";
-  textArea.placeholder = `Text copied to clipboard`;
+  textArea.placeholder = `Text copied to clipboard.\nPress "Reset" to enter a new list.`;
   button.innerHTML = "Reset";
   button.setAttribute("class", "red-background");
   button.onclick = resetTextArea;
